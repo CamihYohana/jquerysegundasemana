@@ -11,4 +11,9 @@ $(function () {
         event.stopPropagation();
         $(this).toggleClass('card__follow-btn--following');
     })
+    $('#image').change(function (event) {
+        var valor = $(event.target).val();
+        var ruta = 'assets/images/squared/' + valor;
+        $(this).parent().siblings('.create__image').children().attr('src', ruta);
+    })
 });
